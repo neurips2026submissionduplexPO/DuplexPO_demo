@@ -1,0 +1,408 @@
+{
+  "sample_id": "V00_S0155_I00000309",
+  "pred_text": "[3.20-6.56s] That's such a great topic. It's one of the most important things in our lives.\n[14.40-16.08s] That's a really interesting question.\n[31.62-31.78s] Yeah\n[41.86-42.02s] Yeah",
+  "pred_segments": [
+    {
+      "start": 3.2,
+      "end": 6.56,
+      "text": "That's such a great topic. It's one of the most important things in our lives.",
+      "sample_start": 34,
+      "sample_end": 134,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 6,
+      "eos_frame": 48,
+      "source_window_index": 1,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 14.4,
+      "end": 16.08,
+      "text": "That's a really interesting question.",
+      "sample_start": 176,
+      "sample_end": 276,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 4,
+      "eos_frame": 25,
+      "source_window_index": 2,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 31.62,
+      "end": 31.78,
+      "text": "Yeah",
+      "sample_start": 420,
+      "sample_end": 520,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 9,
+      "eos_frame": 11,
+      "source_window_index": 6,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 41.86,
+      "end": 42.02,
+      "text": "Yeah",
+      "sample_start": 555,
+      "sample_end": 655,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 2,
+      "eos_frame": 4,
+      "source_window_index": 7,
+      "commit_horizon_sec": 2.0
+    }
+  ],
+  "target_text": "Yeah, I think so. You think we care equally about it? Oh, yeah, that's probably a good one. Yeah, just being able to be self-determined and not have to answer to anybody, really. Mm-hmm. Yeah, having a lot of free time and being able to explore and stuff. And then it gives us more flexibility",
+  "system_prompt": "You enjoy having a good conversation.",
+  "user_segments": [
+    {
+      "start": 0.0,
+      "end": 2.992,
+      "text": "care about? I feel like we care a lot about family, right?"
+    },
+    {
+      "start": 8.044,
+      "end": 31.137,
+      "text": "I think we care, yeah, and we care a lot about freedom. Yeah, I think we care a lot about financial freedom and having the means to do whatever we want and not work jobs that we hate."
+    },
+    {
+      "start": 35.681,
+      "end": 44.3,
+      "text": "Yeah, and that's why we decided to live in an SUV too. So we don't have to pay rent, things like that."
+    }
+  ],
+  "agent_segments": [
+    {
+      "start": 4.348,
+      "end": 7.09,
+      "text": "Yeah, I think so."
+    },
+    {
+      "start": 8.151,
+      "end": 9.492,
+      "text": "You think we care equally about it?"
+    },
+    {
+      "start": 13.295,
+      "end": 15.396,
+      "text": "Oh, yeah, that's probably a good one."
+    },
+    {
+      "start": 16.477,
+      "end": 26.647,
+      "text": "Yeah, just being able to be self-determined and not have to answer to anybody, really. Mm-hmm."
+    },
+    {
+      "start": 32.02,
+      "end": 35.042,
+      "text": "Yeah, having a lot of free time and being able to explore and stuff."
+    },
+    {
+      "start": 43.266,
+      "end": 44.3,
+      "text": "And then it gives us more flexibility"
+    }
+  ],
+  "formatter": "s2s_duplex_from_conv",
+  "audio_output_mode": "none",
+  "inference_mode": "fisher_dense_windowed_rl",
+  "inference_params": {
+    "rl_top_p": 0.9,
+    "rl_temperature": 1.0,
+    "rl_max_rollout_steps": 100,
+    "frame_length": 0.08,
+    "dense_window_seconds": 8.0,
+    "dense_stride_seconds": 1.0,
+    "dense_min_start_seconds": 0.0,
+    "dense_commit_horizon_seconds": 2.0,
+    "dense_max_windows": 0,
+    "dense_trigger_mode": "user_events",
+    "dense_post_user_offset_seconds": -0.24,
+    "dense_backchannel_interval_seconds": 6.0,
+    "dense_use_gt_history": false,
+    "window_semantic_generation": "forward_argmax"
+  },
+  "audio_durations_sec": {
+    "user": 20.0,
+    "pred": 20.0,
+    "stereo": 20.0
+  },
+  "audio_files": {
+    "user": "V00_S0155_I00000309__user.wav",
+    "pred": "V00_S0155_I00000309__pred.wav",
+    "stereo": "V00_S0155_I00000309__stereo.wav"
+  },
+  "fisher_dense_window_summaries": [
+    {
+      "sample_start": 34,
+      "sample_end": 134,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 1,
+      "sample_start_sec": 2.72,
+      "sample_end_sec": 10.72,
+      "decoded": {
+        "bos_frame": 6,
+        "eos_frame": 48,
+        "text": "That's such a great topic. It's one of the most important things in our lives.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 3.2,
+        "end": 6.56,
+        "text": "That's such a great topic. It's one of the most important things in our lives.",
+        "sample_start": 34,
+        "sample_end": 134,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 6,
+        "eos_frame": 48,
+        "source_window_index": 1,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 176,
+      "sample_end": 276,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 2,
+      "sample_start_sec": 14.08,
+      "sample_end_sec": 21.3,
+      "decoded": {
+        "bos_frame": 4,
+        "eos_frame": 25,
+        "text": "That's a really interesting question.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 14.4,
+        "end": 16.08,
+        "text": "That's a really interesting question.",
+        "sample_start": 176,
+        "sample_end": 276,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 4,
+        "eos_frame": 25,
+        "source_window_index": 2,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 251,
+      "sample_end": 351,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 3,
+      "sample_start_sec": 20.08,
+      "sample_end_sec": 25.38,
+      "decoded": {
+        "bos_frame": null,
+        "eos_frame": null,
+        "text": "",
+        "n_tokens": 100
+      },
+      "segment": null,
+      "committed": false,
+      "commit_reason": "empty_text"
+    },
+    {
+      "sample_start": 326,
+      "sample_end": 426,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 4,
+      "sample_start_sec": 23.38,
+      "sample_end_sec": 31.38,
+      "decoded": {
+        "bos_frame": null,
+        "eos_frame": null,
+        "text": "",
+        "n_tokens": 100
+      },
+      "segment": null,
+      "committed": false,
+      "commit_reason": "empty_text"
+    },
+    {
+      "sample_start": 401,
+      "sample_end": 501,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 5,
+      "sample_start_sec": 29.38,
+      "sample_end_sec": 37.38,
+      "decoded": {
+        "bos_frame": 27,
+        "eos_frame": 74,
+        "text": "Exactly. And finding a way to work that doesn't involve hating yourself is key.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 31.54,
+        "end": 35.3,
+        "text": "Exactly. And finding a way to work that doesn't involve hating yourself is key.",
+        "sample_start": 401,
+        "sample_end": 501,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 27,
+        "eos_frame": 74
+      },
+      "committed": false,
+      "commit_reason": "bos_after_commit_horizon"
+    },
+    {
+      "sample_start": 420,
+      "sample_end": 520,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 6,
+      "sample_start_sec": 30.9,
+      "sample_end_sec": 38.9,
+      "decoded": {
+        "bos_frame": 9,
+        "eos_frame": 11,
+        "text": "Yeah",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 31.62,
+        "end": 31.78,
+        "text": "Yeah",
+        "sample_start": 420,
+        "sample_end": 520,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 9,
+        "eos_frame": 11,
+        "source_window_index": 6,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 555,
+      "sample_end": 655,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 7,
+      "sample_start_sec": 41.7,
+      "sample_end_sec": 44.3,
+      "decoded": {
+        "bos_frame": 2,
+        "eos_frame": 4,
+        "text": "Yeah",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 41.86,
+        "end": 42.02,
+        "text": "Yeah",
+        "sample_start": 555,
+        "sample_end": 655,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 2,
+        "eos_frame": 4,
+        "source_window_index": 7,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    }
+  ],
+  "source_meta": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/text/rhythm_winabl_lead1_tbuf2_step60_dense_textonly_all_seamless_hq_eval/naturalistic_seamless/V00_S0155_I00000309/V00_S0155_I00000309__meta.json",
+  "ttsrepair_pipeline": {
+    "ckpt": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/exp_SFT_qwen7b_tts/Qwen2.5-7B_SFT_ParakeetEnc600m_tts_fullmix_postrl_step60_ttsrepair_flowvocab_fullsft_fisher2_seamless2_20260504a_textonly_from_step-60_lr-2e-4/checkpoints/step-10000-test.ckpt",
+    "cosyvoice_dir": "/lustre/fsw/portfolios/llmservice/users/cchen1/hfcache/CosyVoice2-0.5B",
+    "speaker_reference": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/s2s_elbo/process_code/Emma_reference.wav",
+    "pretrained_llm": "Qwen/Qwen2.5-7B",
+    "frame_length": 0.08,
+    "sample_rate": 24000,
+    "temperature": 0.9,
+    "topk": 20,
+    "seed": 42,
+    "semantic_chunk_frames": 4096,
+    "semantic_chunks": [
+      {
+        "start_frame": 0,
+        "end_frame": 1419
+      }
+    ],
+    "semantic_stats": {
+      "shape": [
+        1,
+        2838
+      ],
+      "num_tokens": 2838,
+      "min": 5,
+      "max": 6539,
+      "unique": 140,
+      "zero_frac": 0.0
+    },
+    "text_channel": {
+      "frames": 1419,
+      "frame_length": 0.08,
+      "duration_sec": 113.52,
+      "nonpad": 69
+    },
+    "raw_dir": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0155_I00000309",
+    "final_dir": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/V00_S0155_I00000309",
+    "raw_stats": {
+      "pred_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0155_I00000309/V00_S0155_I00000309__pred.wav",
+      "num_samples": 2725440,
+      "duration_sec": 113.56,
+      "rms": 0.019408782944083214,
+      "peak": 0.9900000095367432,
+      "user_num_samples": 2777615,
+      "user_duration_sec": 115.73395833333333,
+      "user_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0155_I00000309/V00_S0155_I00000309__user.wav",
+      "stereo_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0155_I00000309/V00_S0155_I00000309__stereo.wav",
+      "stereo_num_samples": 2777615,
+      "stereo_duration_sec": 115.73395833333333
+    },
+    "volume_norm": {
+      "target_active_rms": 0.02,
+      "active_threshold": 0.00024,
+      "peak_limit": 0.95,
+      "stats_file": "V00_S0155_I00000309__volnorm.json"
+    }
+  },
+  "postprocess": {
+    "trim_start_sec": 0.0,
+    "trim_end_sec": 44.3,
+    "normalization": "unchanged_after_trim",
+    "removed_intervals_sec": [
+      {
+        "start": 21.3,
+        "end": 24.0
+      }
+    ]
+  }
+}

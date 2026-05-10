@@ -1,0 +1,41 @@
+{
+  "sample_id": "V00_S0062_I00000132",
+  "sample_rate": 24000,
+  "target_active_rms": 0.02,
+  "active_threshold": 0.00024,
+  "peak_limit": 0.95,
+  "user_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_selected_rhythm_step60_dense8_all_max60_20260509/tts_triplets_norm/rhythm_step60_dense8_all_commit1_cases5_ttsrepair_temp07_top10_asrrerank3_fulltimeline_wps48_maxext2/V00_S0062_I00000132/V00_S0062_I00000132__user.wav",
+  "pred_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_selected_rhythm_step60_dense8_all_max60_20260509/tts_triplets_norm/rhythm_step60_dense8_all_commit1_cases5_ttsrepair_temp07_top10_asrrerank3_fulltimeline_wps48_maxext2/V00_S0062_I00000132/V00_S0062_I00000132__pred.wav",
+  "stereo_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_selected_rhythm_step60_dense8_all_max60_20260509/tts_triplets_norm/rhythm_step60_dense8_all_commit1_cases5_ttsrepair_temp07_top10_asrrerank3_fulltimeline_wps48_maxext2/V00_S0062_I00000132/V00_S0062_I00000132__stereo.wav",
+  "user_duration_sec": 19.6,
+  "pred_duration_sec": 19.6,
+  "stereo_duration_sec": 19.6,
+  "user": {
+    "input_rms": 0.00615934853422259,
+    "input_active_rms": 0.007623679984407027,
+    "input_peak": 0.092132568359375,
+    "scale": 2.813102281024334,
+    "output_rms": 0.017326872450936538,
+    "output_active_rms": 0.020000004030905825,
+    "output_peak": 0.259185791015625,
+    "output_peak_i16": 8493
+  },
+  "pred": {
+    "input_rms": 0.03645734268968145,
+    "input_active_rms": 0.09253773908687307,
+    "input_peak": 0.989990234375,
+    "scale": 0.21149392515129814,
+    "output_rms": 0.007710504035466804,
+    "output_active_rms": 0.02001334789397186,
+    "output_peak": 0.209381103515625,
+    "output_peak_i16": 6861
+  },
+  "postcheck": {
+    "user_rms": 0.017326872450936538,
+    "user_active_rms": 0.020000004030905825,
+    "user_peak": 0.259185791015625,
+    "pred_rms": 0.007710504035466804,
+    "pred_active_rms": 0.02001334789397186,
+    "pred_peak": 0.209381103515625
+  }
+}

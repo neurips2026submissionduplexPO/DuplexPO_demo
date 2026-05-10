@@ -1,0 +1,531 @@
+{
+  "sample_id": "V00_S0426_I00000374",
+  "pred_text": "[6.56-7.92s] Yes, I have. It's a pretty cheesy and fun film, isn't\n[9.60-11.68s] I thought it was hilarious and well done.\n[13.12-15.20s] It's a great movie to watch with friends or family.\n[21.32-24.28s] I probably would. It's not a movie you forget quickly.\n[31.24-32.60s] I'd say it's an 8 out of 10 for me.\n[39.48-40.76s] Yeah, it's a fun movie but not one of my personal favorites.",
+  "pred_segments": [
+    {
+      "start": 6.56,
+      "end": 7.92,
+      "text": "Yes, I have. It's a pretty cheesy and fun film, isn't",
+      "sample_start": 77,
+      "sample_end": 177,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 5,
+      "eos_frame": 22,
+      "source_window_index": 2,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 9.6,
+      "end": 11.68,
+      "text": "I thought it was hilarious and well done.",
+      "sample_start": 114,
+      "sample_end": 214,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 6,
+      "eos_frame": 32,
+      "source_window_index": 3,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 13.12,
+      "end": 15.2,
+      "text": "It's a great movie to watch with friends or family.",
+      "sample_start": 156,
+      "sample_end": 256,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 8,
+      "eos_frame": 34,
+      "source_window_index": 4,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 21.32,
+      "end": 24.279999999999998,
+      "text": "I probably would. It's not a movie you forget quickly.",
+      "sample_start": 292,
+      "sample_end": 392,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 7,
+      "eos_frame": 44,
+      "source_window_index": 5,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 31.240000000000002,
+      "end": 32.6,
+      "text": "I'd say it's an 8 out of 10 for me.",
+      "sample_start": 416,
+      "sample_end": 516,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 7,
+      "eos_frame": 24,
+      "source_window_index": 6,
+      "commit_horizon_sec": 2.0
+    },
+    {
+      "start": 39.48,
+      "end": 40.76,
+      "text": "Yeah, it's a fun movie but not one of my personal favorites.",
+      "sample_start": 521,
+      "sample_end": 621,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "bos_frame": 5,
+      "eos_frame": 21,
+      "source_window_index": 7,
+      "commit_horizon_sec": 2.0
+    }
+  ],
+  "target_text": "Yes, of course. I think it's funny. I like it. I like it. I watched, I return to it every, maybe once a year or something I will watch it. Yeah. When I feel like, well now I've seen it enough to where it's like, it can be a background movie, right? Where it's just like you throw it on while you're doing something else. I would say it's a good 6 out of 10. Yeah. Maybe a 7, but not going higher than that. You don't? You just think it's boring or what? That's the whole point. You don't like Tina, you fat lard? You don't like those lines and stuff? Like when he's feeding the llama and he just throws the food at it and shit? fair that makes sense i understand that is so it is there is something to be said that that movie did so well with such a low budget and yeah yeah i think it's funny i definitely think it's funny um like i i immediately think of like this scene when they're on the like his his brother whatever's on the computer and they just go they like like fight each other it's just like awkward weird yeah okay So you're obviously not voting for Pedro then? Yeah, yeah. Wow, okay. Interesting. I did not know you felt that strongly about it. We won't be dressing up as them for Halloween then, I guess. Well, we talked about how I just went and saw Hamilton for the first time.",
+  "system_prompt": "You enjoy having a good conversation.",
+  "user_segments": [
+    {
+      "start": 1.905999999999949,
+      "end": 2.7870000000000346,
+      "text": "Yeah."
+    },
+    {
+      "start": 4.488000000000056,
+      "end": 6.38900000000001,
+      "text": "Have you seen the movie Napoleon Dynamite?"
+    },
+    {
+      "start": 7.830000000000041,
+      "end": 9.371999999999957,
+      "text": "What are your thoughts about that movie?"
+    },
+    {
+      "start": 11.613000000000056,
+      "end": 12.714000000000055,
+      "text": "Like, how much do you like it?"
+    },
+    {
+      "start": 18.448,
+      "end": 21.029999999999994,
+      "text": "Like you will choose to re-watch that movie."
+    },
+    {
+      "start": 29.334999999999944,
+      "end": 30.935999999999943,
+      "text": "Would you rate it out of 10 for me?"
+    },
+    {
+      "start": 38.06099999999994,
+      "end": 39.34100000000003,
+      "text": "OK, so not that high."
+    },
+    {
+      "start": 40.98199999999999,
+      "end": 41.74299999999996,
+      "text": "OK, OK."
+    }
+  ],
+  "agent_segments": [
+    {
+      "start": 6.725000000000023,
+      "end": 7.586000000000013,
+      "text": "Yes, of course."
+    },
+    {
+      "start": 9.907000000000039,
+      "end": 10.447999999999979,
+      "text": "I think it's funny."
+    },
+    {
+      "start": 10.628000000000043,
+      "end": 10.988000000000056,
+      "text": "I like it."
+    },
+    {
+      "start": 15.11099999999999,
+      "end": 15.510999999999967,
+      "text": "I like it."
+    },
+    {
+      "start": 15.530999999999949,
+      "end": 17.4,
+      "text": "I watched, I return to it every, maybe once a year or something I will watch it."
+    },
+    {
+      "start": 17.4,
+      "end": 18.174999999999976,
+      "text": "I watched, I return to it every, maybe once a year or something I will watch it."
+    },
+    {
+      "start": 21.27699999999995,
+      "end": 22.177000000000042,
+      "text": "Yeah."
+    },
+    {
+      "start": 22.376999999999974,
+      "end": 29.001999999999974,
+      "text": "When I feel like, well now I've seen it enough to where it's like, it can be a background movie, right? Where it's just like you throw it on while you're doing something else."
+    },
+    {
+      "start": 34.299999999999976,
+      "end": 38.82399999999998,
+      "text": "I would say it's a good 6 out of 10. Yeah."
+    },
+    {
+      "start": 39.82399999999998,
+      "end": 41.765999999999984,
+      "text": "Maybe a 7, but not going higher than that."
+    }
+  ],
+  "formatter": "s2s_duplex_from_conv",
+  "audio_output_mode": "none",
+  "inference_mode": "fisher_dense_windowed_rl",
+  "inference_params": {
+    "rl_top_p": 0.9,
+    "rl_temperature": 1.0,
+    "rl_max_rollout_steps": 100,
+    "frame_length": 0.08,
+    "dense_window_seconds": 8.0,
+    "dense_stride_seconds": 1.0,
+    "dense_min_start_seconds": 0.0,
+    "dense_commit_horizon_seconds": 2.0,
+    "dense_max_windows": 0,
+    "dense_trigger_mode": "user_events",
+    "dense_post_user_offset_seconds": -0.24,
+    "dense_backchannel_interval_seconds": 6.0,
+    "dense_use_gt_history": false,
+    "window_semantic_generation": "forward_argmax"
+  },
+  "audio_durations_sec": {
+    "user": 25.5,
+    "pred": 25.5,
+    "stereo": 25.5
+  },
+  "audio_files": {
+    "user": "V00_S0426_I00000374__user.wav",
+    "pred": "V00_S0426_I00000374__pred.wav",
+    "stereo": "V00_S0426_I00000374__stereo.wav"
+  },
+  "fisher_dense_window_summaries": [
+    {
+      "sample_start": 32,
+      "sample_end": 132,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 1,
+      "sample_start_sec": 2.56,
+      "sample_end_sec": 10.56,
+      "decoded": {
+        "bos_frame": 8,
+        "eos_frame": 21,
+        "text": "Sure, how can I assist you?",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 3.2,
+        "end": 4.24,
+        "text": "Sure, how can I assist you?",
+        "sample_start": 32,
+        "sample_end": 132,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 8,
+        "eos_frame": 21,
+        "source_window_index": 1,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 77,
+      "sample_end": 177,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 2,
+      "sample_start_sec": 6.16,
+      "sample_end_sec": 14.16,
+      "decoded": {
+        "bos_frame": 5,
+        "eos_frame": 22,
+        "text": "Yes, I have. It's a pretty cheesy and fun film, isn't",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 6.56,
+        "end": 7.92,
+        "text": "Yes, I have. It's a pretty cheesy and fun film, isn't",
+        "sample_start": 77,
+        "sample_end": 177,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 5,
+        "eos_frame": 22,
+        "source_window_index": 2,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 114,
+      "sample_end": 214,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 3,
+      "sample_start_sec": 9.12,
+      "sample_end_sec": 17.12,
+      "decoded": {
+        "bos_frame": 6,
+        "eos_frame": 32,
+        "text": "I thought it was hilarious and well done.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 9.6,
+        "end": 11.68,
+        "text": "I thought it was hilarious and well done.",
+        "sample_start": 114,
+        "sample_end": 214,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 6,
+        "eos_frame": 32,
+        "source_window_index": 3,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 156,
+      "sample_end": 256,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 4,
+      "sample_start_sec": 12.48,
+      "sample_end_sec": 17.4,
+      "decoded": {
+        "bos_frame": 8,
+        "eos_frame": 34,
+        "text": "It's a great movie to watch with friends or family.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 13.12,
+        "end": 15.2,
+        "text": "It's a great movie to watch with friends or family.",
+        "sample_start": 156,
+        "sample_end": 256,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 8,
+        "eos_frame": 34,
+        "source_window_index": 4,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 292,
+      "sample_end": 392,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 5,
+      "sample_start_sec": 20.759999999999998,
+      "sample_end_sec": 28.759999999999998,
+      "decoded": {
+        "bos_frame": 7,
+        "eos_frame": 44,
+        "text": "I probably would. It's not a movie you forget quickly.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 21.32,
+        "end": 24.279999999999998,
+        "text": "I probably would. It's not a movie you forget quickly.",
+        "sample_start": 292,
+        "sample_end": 392,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 7,
+        "eos_frame": 44,
+        "source_window_index": 5,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 416,
+      "sample_end": 516,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 6,
+      "sample_start_sec": 30.68,
+      "sample_end_sec": 38.68,
+      "decoded": {
+        "bos_frame": 7,
+        "eos_frame": 24,
+        "text": "I'd say it's an 8 out of 10 for me.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 31.240000000000002,
+        "end": 32.6,
+        "text": "I'd say it's an 8 out of 10 for me.",
+        "sample_start": 416,
+        "sample_end": 516,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 7,
+        "eos_frame": 24,
+        "source_window_index": 6,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 521,
+      "sample_end": 621,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 7,
+      "sample_start_sec": 39.08,
+      "sample_end_sec": 43.1,
+      "decoded": {
+        "bos_frame": 5,
+        "eos_frame": 21,
+        "text": "Yeah, it's a fun movie but not one of my personal favorites.",
+        "n_tokens": 100
+      },
+      "segment": {
+        "start": 39.48,
+        "end": 40.76,
+        "text": "Yeah, it's a fun movie but not one of my personal favorites.",
+        "sample_start": 521,
+        "sample_end": 621,
+        "gt_seg_start_sec": null,
+        "gt_seg_end_sec": null,
+        "is_backchannel": false,
+        "bos_frame": 5,
+        "eos_frame": 21,
+        "source_window_index": 7,
+        "commit_horizon_sec": 2.0
+      },
+      "committed": true,
+      "commit_reason": "committed"
+    },
+    {
+      "sample_start": 551,
+      "sample_end": 651,
+      "gt_seg_start_sec": null,
+      "gt_seg_end_sec": null,
+      "is_backchannel": false,
+      "window_index": 8,
+      "sample_start_sec": 41.48,
+      "sample_end_sec": 43.1,
+      "decoded": {
+        "bos_frame": null,
+        "eos_frame": null,
+        "text": "",
+        "n_tokens": 100
+      },
+      "segment": null,
+      "committed": false,
+      "commit_reason": "empty_text"
+    }
+  ],
+  "source_meta": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/text/rhythm_winabl_lead1_tbuf2_step60_dense_textonly_all_seamless_hq_eval/naturalistic_seamless/V00_S0426_I00000374/V00_S0426_I00000374__meta.json",
+  "ttsrepair_pipeline": {
+    "ckpt": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/exp_SFT_qwen7b_tts/Qwen2.5-7B_SFT_ParakeetEnc600m_tts_fullmix_postrl_step60_ttsrepair_flowvocab_fullsft_fisher2_seamless2_20260504a_textonly_from_step-60_lr-2e-4/checkpoints/step-10000-test.ckpt",
+    "cosyvoice_dir": "/lustre/fsw/portfolios/llmservice/users/cchen1/hfcache/CosyVoice2-0.5B",
+    "speaker_reference": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/s2s_elbo/process_code/Emma_reference.wav",
+    "pretrained_llm": "Qwen/Qwen2.5-7B",
+    "frame_length": 0.08,
+    "sample_rate": 24000,
+    "temperature": 0.9,
+    "topk": 20,
+    "seed": 42,
+    "semantic_chunk_frames": 4096,
+    "semantic_chunks": [
+      {
+        "start_frame": 0,
+        "end_frame": 2700
+      }
+    ],
+    "semantic_stats": {
+      "shape": [
+        1,
+        5400
+      ],
+      "num_tokens": 5400,
+      "min": 2,
+      "max": 6537,
+      "unique": 271,
+      "zero_frac": 0.0
+    },
+    "text_channel": {
+      "frames": 2700,
+      "frame_length": 0.08,
+      "duration_sec": 216.0,
+      "nonpad": 193
+    },
+    "raw_dir": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0426_I00000374",
+    "final_dir": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/V00_S0426_I00000374",
+    "raw_stats": {
+      "pred_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0426_I00000374/V00_S0426_I00000374__pred.wav",
+      "num_samples": 5184960,
+      "duration_sec": 216.04,
+      "rms": 0.02291342243552208,
+      "peak": 0.9900000095367432,
+      "user_num_samples": 5365775,
+      "user_duration_sec": 223.57395833333334,
+      "user_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0426_I00000374/V00_S0426_I00000374__user.wav",
+      "stereo_output": "/lustre/fs12/portfolios/llmservice/projects/llmservice_nemo_speechlm/users/cchen1/code/duplex_rl/exp_benchmark/turn_taking_v1_implcheck/runs/seamless_eval_text_then_tts_20260507_longrun/tts_triplets_norm/rhythm_winabl_lead1_tbuf2_step60_ttsrepair_step10000_partial_current_text_norm/_raw/V00_S0426_I00000374/V00_S0426_I00000374__stereo.wav",
+      "stereo_num_samples": 5365775,
+      "stereo_duration_sec": 223.57395833333334
+    },
+    "volume_norm": {
+      "target_active_rms": 0.02,
+      "active_threshold": 0.00024,
+      "peak_limit": 0.95,
+      "stats_file": "V00_S0426_I00000374__volnorm.json"
+    }
+  },
+  "postprocess": {
+    "trim_start_sec": 0.0,
+    "trim_end_sec_original_timeline": 45.7,
+    "removed_interval_original_timeline": [
+      17.4,
+      20.0
+    ],
+    "pred_silenced_before_sec_original_timeline": 6.32,
+    "final_duration_sec": 43.1,
+    "normalization": "active_rms_per_channel_before_stereo_mix",
+    "target_active_rms": 0.02,
+    "active_threshold": 0.00024,
+    "peak_limit": 0.95
+  }
+}

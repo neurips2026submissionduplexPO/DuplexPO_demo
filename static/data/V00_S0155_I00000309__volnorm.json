@@ -1,0 +1,52 @@
+{
+  "sample_id": "V00_S0155_I00000309",
+  "sample_rate": 24000,
+  "target_active_rms": 0.02,
+  "active_threshold": 0.00024,
+  "peak_limit": 0.95,
+  "user_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/demo/static/audio/V00_S0155_I00000309/V00_S0155_I00000309__user.wav",
+  "pred_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/demo/static/audio/V00_S0155_I00000309/V00_S0155_I00000309__pred.wav",
+  "stereo_output": "/lustre/fsw/portfolios/llmservice/users/cchen1/code/duplex_rl/demo/static/audio/V00_S0155_I00000309/V00_S0155_I00000309__stereo.wav",
+  "stereo_duration_sec": 20.0,
+  "user": {
+    "input_rms": 0.00280159558510015,
+    "input_active_rms": 0.004279427408643257,
+    "input_peak": 0.08892822265625,
+    "scale": 6.428231578047478,
+    "output_rms": 0.016201477904043776,
+    "output_active_rms": 0.018595831567879886,
+    "output_peak": 0.350555419921875,
+    "output_peak_i16": 11487
+  },
+  "pred": {
+    "input_rms": 0.04682950545946946,
+    "input_active_rms": 0.09320076646720464,
+    "input_peak": 0.989990234375,
+    "scale": 0.20564700462542707,
+    "output_rms": 0.01221254354581522,
+    "output_active_rms": 0.018870987716517188,
+    "output_peak": 0.203582763671875,
+    "output_peak_i16": 6671
+  },
+  "user_duration_sec": 20.0,
+  "pred_duration_sec": 20.0,
+  "postprocess": {
+    "trim_start_sec": 0.0,
+    "trim_end_sec": 44.3,
+    "normalization": "unchanged_after_trim",
+    "removed_intervals_sec": [
+      {
+        "start": 21.3,
+        "end": 24.0
+      }
+    ]
+  },
+  "postcheck": {
+    "user_rms": 0.015729663697718547,
+    "user_active_rms": 0.018209409713928554,
+    "user_peak": 0.350555419921875,
+    "pred_rms": 0.011856569720038762,
+    "pred_active_rms": 0.018870987716517188,
+    "pred_peak": 0.203582763671875
+  }
+}
