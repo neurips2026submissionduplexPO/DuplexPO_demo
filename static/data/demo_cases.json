@@ -1,4 +1,4 @@
-window.DEMO_CASES = [
+[
   {
     "sample_id": "Roleplaying_QA_45_203.40846875000003",
     "duration": 12.0,
@@ -17157,14 +17157,24 @@ window.DEMO_CASES = [
     "pred_segments": [
       {
         "start": 1.84,
-        "end": 18.8,
-        "text": "absolutely that's you're definitely alone in that way yeah that's"
+        "end": 3.5,
+        "text": "Absolutely"
       },
       {
-        "start": 18.8,
+        "start": 7.5,
+        "end": 8.3,
+        "text": "That's"
+      },
+      {
+        "start": 14.2,
+        "end": 16.0,
+        "text": "You're definitely not alone in that way"
+      },
+      {
+        "start": 18.2,
         "end": 19.6,
-        "text": "definitely"
+        "text": "That's definitely"
       }
     ]
   }
-];
+]
