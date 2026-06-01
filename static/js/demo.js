@@ -133,6 +133,38 @@
         return { row, track, playhead: innerPlayhead };
     }
 
+    function makeTranscriptRow(kind, segments, duration, seekAll) {
+        const row = document.createElement("div");
+        row.className = "timeline-row transcript-row";
+
+        const rowLabel = document.createElement("div");
+        rowLabel.className = "row-label";
+
+        const track = document.createElement("div");
+        track.className = `transcript-track ${kind}`;
+
+        (segments || []).forEach((seg) => {
+            const start = Math.max(0, Number(seg.start) || 0);
+            const end = Math.min(duration, Number(seg.end) || start);
+            if (end <= start) return;
+            const leftPct = (start / duration) * 100;
+            const widthPct = ((end - start) / duration) * 100;
+            const pill = document.createElement("button");
+            pill.type = "button";
+            pill.className = `seg-pill ${kind}`;
+            pill.style.left = `${leftPct}%`;
+            pill.style.width = `${widthPct}%`;
+            pill.textContent = seg.text || "";
+            pill.title = `${seg.text || ""}  (${start.toFixed(2)}s–${end.toFixed(2)}s)`;
+            pill.addEventListener("click", () => seekAll(start));
+            track.appendChild(pill);
+        });
+
+        row.appendChild(rowLabel);
+        row.appendChild(track);
+        return row;
+    }
+
     function makeRulerRow(duration) {
         const row = document.createElement("div");
         row.className = "timeline-row";
@@ -242,7 +274,9 @@
 
         canvas.appendChild(makeRulerRow(duration));
         canvas.appendChild(userWave.row);
+        canvas.appendChild(makeTranscriptRow("user", data.user_segments, duration, seekAll));
         canvas.appendChild(agentWave.row);
+        canvas.appendChild(makeTranscriptRow("agent", data.pred_segments, duration, seekAll));
         scroll.appendChild(canvas);
         panel.appendChild(scroll);
         section.appendChild(panel);
