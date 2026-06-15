@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuplexPO Audio Demo</title>
+    <meta name="description" content="Audio samples for DuplexPO, a reinforcement learning framework for full-duplex spoken dialogue dynamics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css?v=44">
+</head>
+<body>
+    <main class="app">
+        <nav class="site-nav" aria-label="Page navigation">
+            <div class="site-links">
+                <a href="#abstract">Abstract</a>
+                <a href="#method">Method</a>
+                <a href="#experiments">Experiments</a>
+                <a href="#audioExamples">Audio</a>
+            </div>
+        </nav>
+
+        <header class="topbar hero">
+            <div class="hero-main">
+                <h1>
+                    <span class="title-line">Decoupling Conversational Dynamics in Full-Duplex</span>
+                    <span class="title-line">Spoken Models through Reinforcement Learning</span>
+                </h1>
+            </div>
+        </header>
+
+        <section class="listen-strip" aria-label="What to listen for">
+            <article class="listen-card">
+                <span>01</span>
+                <h2>waits through hesitation</h2>
+                <p>Listen for silence where a turn-based agent would prematurely answer.</p>
+            </article>
+            <article class="listen-card">
+                <span>02</span>
+                <h2>enters on clean boundaries</h2>
+                <p>The model starts after the user completes the relevant intent.</p>
+            </article>
+            <article class="listen-card">
+                <span>03</span>
+                <h2>adds small acknowledgements</h2>
+                <p>Backchannels support the speaker without taking over the floor.</p>
+            </article>
+            <article class="listen-card">
+                <span>04</span>
+                <h2>keeps answers compact</h2>
+                <p>Participation is regulated so the dialogue keeps moving.</p>
+            </article>
+        </section>
+
+        <section class="abstract-section section-block" id="abstract" aria-label="Abstract">
+            <div class="abstract-content">
+                <p>Recent <strong>full-duplex spoken dialogue models</strong> have demonstrated compelling progress toward human-like interaction, enabling agents to respond with low latency, produce backchannels, and handle user barge-ins. Yet these improvements in conversational dynamics often come with weaker reasoning and instruction-following abilities, revealing a potential tension between interactive dynamics and intelligence capability. In this paper, we argue that such an <strong>intelligence&ndash;dynamics trade-off is not fundamental</strong>: conversational dynamics can instead be learned as a separate real-time decision policy from human dialogue data. To this end, we propose <strong>DuplexPO</strong>, a reinforcement learning (RL) framework that <strong>decouples when to speak from what to say</strong>. It preserves the semantic response capability of an instruction-tuned assistant, while optimizing its temporal interaction behavior over selected high-impact windows from long human conversations. To quantitatively optimize these dynamics, we formulate the <strong>Factorized Conversational Dynamics Reward (FCDR)</strong> to enable fine-grained temporal credit assignment for turn initiation, backchanneling, yielding, and regularized participation. The policy is then optimized with a <strong>GRPO-style objective</strong>. Experiments show that DuplexPO substantially improves <strong>timely backchannels, smooth turn-taking, and barge-in handling</strong>, while maintaining strong reasoning and instruction-following performance. Moreover, improvements in dynamics-oriented metrics are reflected in better user experience, suggesting that optimizing conversational timing as a standalone objective can promote more natural full-duplex interaction.</p>
+            </div>
+        </section>
+
+        <section class="section-block method-section" id="method" aria-label="Method overview">
+            <div class="category-heading">
+                <h2 class="category-title">Method Overview</h2>
+            </div>
+            <div class="method-blog">
+                <div class="method-copy">
+                    <h3>Optimize when the model speaks, without rewriting what it says.</h3>
+                    <p>DuplexPO treats full-duplex interaction as a local policy-learning problem. Instead of optimizing whole conversations, it focuses on short dynamics-critical windows where timing decisions actually matter: backchannels, turn transitions, and user barge-ins.</p>
+                    <p>The demo below is organized around those same behaviors. Each audio case is a listening probe for the policy: does it wait, acknowledge, enter, or yield at the right moment?</p>
+                </div>
+                <figure class="method-figure">
+                    <img src="static/img/duplexpo-method-architecture.png" alt="DuplexPO method architecture showing critical windows, reward calculation, and policy optimization">
+                    <figcaption>Paper architecture: red windows mark local conversational events; each window is rolled out, scored, and optimized with RL.</figcaption>
+                </figure>
+                <div class="method-flow" aria-label="DuplexPO method stages">
+                    <article class="method-item">
+                        <span class="method-index">1</span>
+                        <h3>Find local windows</h3>
+                        <p>Sample short regions around annotated speaking events instead of training on entire dialogues.</p>
+                    </article>
+                    <article class="method-item">
+                        <span class="method-index">2</span>
+                        <h3>Roll out timing choices</h3>
+                        <p>Condition on the prior context, then sample the policy only inside the critical window.</p>
+                    </article>
+                    <article class="method-item">
+                        <span class="method-index">3</span>
+                        <h3>Score FCDR factors</h3>
+                        <p>Assign event-level credit for onset timing, backchannel timing, yielding, and participation.</p>
+                    </article>
+                    <article class="method-item">
+                        <span class="method-index">4</span>
+                        <h3>Update with GRPO</h3>
+                        <p>Use group-normalized rewards while regularizing toward the reference SFT policy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block experiments-section" id="experiments" aria-label="Experiments">
+            <div class="category-heading">
+                <p class="category-eyebrow">Benchmark results</p>
+                <h2 class="category-title">Experiments</h2>
+            </div>
+            <div class="experiment-blog">
+                <div class="experiment-copy">
+                    <h3>Better timing without giving up the assistant's general capability.</h3>
+                    <p>We evaluate DuplexPO along two axes: full-duplex conversational dynamics and model intelligence. The dynamics benchmarks test whether the model enters, backchannels, and yields at the right time. The intelligence benchmarks check whether this timing policy preserves factual QA, instruction following, speech understanding, and reasoning.</p>
+                </div>
+
+                <div class="experiment-stat-strip" aria-label="Key experiment results">
+                    <article>
+                        <span>Fisher</span>
+                        <strong>0.69</strong>
+                        <p>lowest onset MAE</p>
+                    </article>
+                    <article>
+                        <span>Fisher</span>
+                        <strong>100%</strong>
+                        <p>backchannel yield</p>
+                    </article>
+                    <article>
+                        <span>FDB-v3</span>
+                        <strong>0.24s</strong>
+                        <p>turn-taking latency</p>
+                    </article>
+                    <article>
+                        <span>FDB-v3</span>
+                        <strong>100%</strong>
+                        <p>yield rate</p>
+                    </article>
+                </div>
+
+                <div class="experiment-figure-grid" aria-label="Experiment figures">
+                    <figure class="paper-figure">
+                        <img src="static/img/duplexpo-reward-training.png" alt="Reward training curve for DuplexPO">
+                        <figcaption>Training reward trends upward as the policy learns local timing decisions.</figcaption>
+                    </figure>
+                    <figure class="paper-figure">
+                        <img src="static/img/duplexpo-gemini-judge.png" alt="Gemini pairwise judge evaluation comparing SFT baseline and DuplexPO">
+                        <figcaption>Conversation-level judging favors DuplexPO on turn-taking, backchanneling, and barge-in handling.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="experiment-grid">
+                    <article class="experiment-card experiment-card-wide">
+                        <h3>Window-level dynamics</h3>
+                        <p>DuplexPO is compared with open full-duplex baselines and two SFT controls. Lower onset MAE is better; higher yield rates indicate cleaner floor control.</p>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Dataset</th>
+                                        <th>Method</th>
+                                        <th>Onset MAE</th>
+                                        <th>Turn yield</th>
+                                        <th>Backchannel yield</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fisher</td>
+                                        <td>Moshi</td>
+                                        <td>1.99</td>
+                                        <td>76.5%</td>
+                                        <td>66.7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fisher</td>
+                                        <td>PersonaPlex</td>
+                                        <td>1.50</td>
+                                        <td>80.3%</td>
+                                        <td>69.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fisher</td>
+                                        <td>SFT Baseline</td>
+                                        <td>0.98</td>
+                                        <td>92.1%</td>
+                                        <td>57.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fisher</td>
+                                        <td>SFT Dynamics</td>
+                                        <td>1.14</td>
+                                        <td>78.9%</td>
+                                        <td>57.1%</td>
+                                    </tr>
+                                    <tr class="best-row">
+                                        <td>Fisher</td>
+                                        <td>DuplexPO</td>
+                                        <td>0.69</td>
+                                        <td>98.7%</td>
+                                        <td>100.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seamless</td>
+                                        <td>Moshi</td>
+                                        <td>2.16</td>
+                                        <td>69.0%</td>
+                                        <td>71.3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seamless</td>
+                                        <td>PersonaPlex</td>
+                                        <td>1.77</td>
+                                        <td>79.6%</td>
+                                        <td>84.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seamless</td>
+                                        <td>SFT Baseline</td>
+                                        <td>1.22</td>
+                                        <td>78.5%</td>
+                                        <td>79.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seamless</td>
+                                        <td>SFT Dynamics</td>
+                                        <td>1.34</td>
+                                        <td>63.0%</td>
+                                        <td>63.4%</td>
+                                    </tr>
+                                    <tr class="best-row">
+                                        <td>Seamless</td>
+                                        <td>DuplexPO</td>
+                                        <td>1.03</td>
+                                        <td>93.6%</td>
+                                        <td>93.3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="experiment-card">
+                        <h3>Disfluency and barge-in</h3>
+                        <p>FDB-v3 exposes premature interruption during disfluent user turns. DuplexPO keeps latency low while yielding reliably.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Latency</th>
+                                    <th>VIR</th>
+                                    <th>Yield</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Moshi</td>
+                                    <td>0.44s</td>
+                                    <td>12.0%</td>
+                                    <td>71.9%</td>
+                                </tr>
+                                <tr>
+                                    <td>PersonaPlex</td>
+                                    <td>1.41s</td>
+                                    <td>15.0%</td>
+                                    <td>66.7%</td>
+                                </tr>
+                                <tr>
+                                    <td>SFT Baseline</td>
+                                    <td>7.33s</td>
+                                    <td>8.0%</td>
+                                    <td>64.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>SFT Dynamics</td>
+                                    <td>14.24s</td>
+                                    <td>4.0%</td>
+                                    <td>93.3%</td>
+                                </tr>
+                                <tr class="best-row">
+                                    <td>DuplexPO</td>
+                                    <td>0.24s</td>
+                                    <td>5.0%</td>
+                                    <td>100.0%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <article class="experiment-card">
+                        <h3>Model intelligence is preserved</h3>
+                        <p>Timing optimization does not trade away the SFT model's semantic capability; DuplexPO stays aligned or improves across representative benchmarks.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>SFT</th>
+                                    <th>DuplexPO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>LlamaQ</td>
+                                    <td>72.0</td>
+                                    <td>75.3</td>
+                                </tr>
+                                <tr>
+                                    <td>WebQ</td>
+                                    <td>44.3</td>
+                                    <td>44.5</td>
+                                </tr>
+                                <tr>
+                                    <td>AlpacaEval</td>
+                                    <td>3.43</td>
+                                    <td>3.68</td>
+                                </tr>
+                                <tr>
+                                    <td>CommonEval</td>
+                                    <td>3.48</td>
+                                    <td>3.74</td>
+                                </tr>
+                                <tr>
+                                    <td>OpenBookQA</td>
+                                    <td>72.2</td>
+                                    <td>73.7</td>
+                                </tr>
+                                <tr>
+                                    <td>MMSU</td>
+                                    <td>54.9</td>
+                                    <td>56.2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block samples-intro" id="audioExamples" aria-label="Audio samples">
+            <div class="category-heading">
+                <h2 class="category-title">Audio Examples</h2>
+            </div>
+            <div class="axis-nav" id="axisNav" aria-label="Audio example filters"></div>
+        </section>
+
+        <section class="case-stack" id="caseStack" aria-label="Demo cases"></section>
+
+        <footer class="footer">
+            <span>DuplexPO audio demo</span>
+        </footer>
+    </main>
+
+    <script src="static/data/demo_cases.js?v=1781488804"></script>
+    <script src="static/js/demo.js?v=25"></script>
+</body>
+</html>
