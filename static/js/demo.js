@@ -18,22 +18,7 @@
             signals: ["Clean turn entry", "Concise response"],
             takeaway: "The model enters at a clean turn boundary and keeps the response concise, matching the user's lightweight social intent."
         },
-        "V00_S0426_I00000374_pause11": {
-            axis: "yielding",
-            axisLabel: "Pause handling",
-            order: 2,
-            source: "Human dialogue window",
-            signals: ["11s focused window", "Pause timing inspection"],
-            takeaway: "The first 11 seconds isolate the user's movie-question setup and the model's early response for pause-handling inspection."
-        },
-        "V00_S0426_I00000374": {
-            axis: "turn-taking",
-            axisLabel: "Participation",
-            order: 2,
-            source: "Human dialogue window",
-            signals: ["Regularized participation", "No floor takeover"],
-            takeaway: "The response maintains conversational pace instead of taking over the exchange with an overlong utterance."
-        },
+
         "V00_S0155_I00000309": {
             axis: "turn-taking",
             axisLabel: "Mixed dynamics",
